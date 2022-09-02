@@ -17,6 +17,6 @@ jobs:
     
     steps:
     - uses: actions/checkout@v3
-    - run: docker build . -t tunaola/gitactionapps:first
+    - run: docker build . -t tunaola/gitactionapps
     - run: echo "${{secrets.DOCKER_HUB_PASSWORD}}" | docker login -u ${{secrets.DOCKER_HUB_USERNAME}} --password stdin
     - run: docker push tunaola/gitactionsapps:first
